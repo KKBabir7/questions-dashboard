@@ -1,0 +1,843 @@
+
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>
+            Question Database
+		</title>
+		<link rel="icon" href="img/calicon.png" type="image/png" sizes="16x16">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/navbar.css"> 
+		<link rel="stylesheet" href="css/quesdb.css"> 
+    </head>
+    <style>
+			img{
+			image-rendering: -moz-crisp-edges !important;       
+			image-rendering:   -o-crisp-edges !important;       
+			image-rendering: -webkit-optimize-contrast !important;
+			image-rendering: crisp-edges !important;
+			-ms-interpolation-mode: nearest-neighbor !important;
+		}
+		
+    </style>
+    <body>
+<!----------header----------->
+	<header class="headernav" id="headernav">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo/top-logo.svg"></a>
+
+			  </div>
+		  
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<ul class="nav navbar-nav navbar-right">
+				  <li><a href="#"><i class="bi bi-bell-fill"></i></a></li>
+				  <li class="dot"><a href="#"><i class="fa fa-comments"></i></a></li>
+				  <li><a href="#"> <i class="bi bi-grid-3x3-gap-fill"></i></a></li>
+				  <li class="profile"><a href="#"><img src="img/profile/peter.jpg"></a><i class="bi bi-plus-circle-fill"></i></li>
+				 
+				</ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		  </nav>
+	</header>
+
+    <div id="wrapper">
+	<!-- Sidebar -->
+	   <div id="sidebar-wrapper">
+		    <div  class="sidebar-nav">
+				<div class="sidebarlogo">
+					<p><img  id="sideimgsec" class="sideimgsec" src="img/logo/side-logo.png"></p>
+					<p><button class="navbar-toggle collapse in onoff" data-toggle="collapse" id="menu-toggle-2"> <i class="bi bi-arrow-left"></i>
+				</button></p>
+				</div>
+				<div class="homemenu" id="homemenu">
+					<p>Home</p>
+					<p>...</p>
+				</div>
+			    <ul class="nav-pills nav-stacked" id="menu">
+				   <li>
+					    <a href="index.html"><span class="inconformenu"><i class="bi bi-grid-fill"></i>
+						</span> <span id="contentli" class="contentli"> Dashboard</span> </a>
+					 
+				    </li>
+				    <li>
+					    <a href="analytics.html"><span class="inconformenu"><i class="bi bi-file-bar-graph"></i>
+						</span><span id="contentli" class="contentli"> Analytics</span> </a>
+				    </li>
+				    <li class="active">
+					    <a href="quesdb.html"> <span class="inconformenu"><i class="bi bi-card-text"></i> 
+						</span><span id="contentli" class="contentli">Question Database</span> </a>
+				    </li>
+				    <li>
+					    <a href="#"><span class="inconformenu"><i class="bi bi-credit-card"></i></span> <span id="contentli" class="contentli">Account</span> </a>
+				    </li>
+				    <li class=" message">
+					    <a href="#"><span class="inconformenu"><i class="bi bi-chat-square-text"></i>
+						</span> <span id="contentli" class="contentli">Message</span> </a>
+						<h3 class="notfi" id="notfi">30</h3>
+				    </li>
+				    <li >
+					    <a href="#"><span class="inconformenu"><i class="bi bi-gear"></i>
+						</span><span id="contentli" class="contentli">Settings</span> </a>
+				    </li>
+				    <li  class=" logoumenu">
+					    <a href="#"><span class="inconformenu">
+						<i class="bi bi-box-arrow-right"></i>
+					   </span> <span id="contentli" class="contentli">Logout</span> </a>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+	<!-- /#sidebar-wrapper -->
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+	   <div class="container-fluid xyz">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron qdbsearch">
+						<div class="dbheading">
+                           <h3>Datenbank Aufgaben<span>(53)</span></h3>
+				     	   
+							<button class="btn btn-primary" data-toggle="modal" data-target="#stepques"><i class="bi bi-plus-lg"></i> Frage hinzufügen</button>
+					    </div>
+                        <div class="dbsearch">
+                            <div class="input-group">
+								<input type="text" class="form-control mainsearchinput" aria-label="..." placeholder="Fachbereich, Thema, Schlagwort eingeben ">
+								<i class="bi bi-search seaarchicon"></i>
+								<div class="input-group-btn">
+									<div class="btn-group  dropdown todosn maintodokj" id="todos">
+										<button class="btn  btn-default dropdown-toggle botn-todos" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-file-text"></i> &nbsp;<span class="intoradio">Fragetyp</span>
+										<span class="caret caret-posicion"></span>
+										</button>
+										<ul class="dropdown-menu ancho-todos maintodokj-tods" aria-labelledby="dropdownMenu1">
+											<li class="activeto">
+												<input type="radio" id="fragetyp-option"  name="ftf" value="f" checked>
+												<label for="fragetyp-option" class="checkdiop"> Fragetyp</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+										    <li>
+												<input type="radio" id="the-option"  name="ftf" value="t">
+												<label for="the-option" class="checkdiop"> Themengebiet</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="far-option"  name="ftf" value="tft">
+												<label for="far-option" class="checkdiop"> Fargen</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											
+										</ul>
+									  </div>
+								  <a type="button" class="btn btn-default btndiv"><button class=" btnsuchen">Suche</button></a>
+								</div><!-- /btn-group -->
+							  </div> 
+						</div>
+						<div class="fargefilter">
+                             <ul class="fargeul">
+								 <li class="fageulli">
+									<div class="dropdown artder">
+										<button class="btn btn-block btn-default dropdown-toggle" type="button" data-toggle="dropdown"><span class="dropdown-text"> Art der Frage</span>
+										<span class="caret" style="opacity: 0.6;"></span></button>
+										<ul class="dropdown-menu">
+										    <li>
+												<label class="checkdesign">Topic 1
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkdesign">Topic 2
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkdesign">Topic 3
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkdesign">Topic 4
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkdesign">Topic 5
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+											<li>
+												<label class="checkdesign">Topic 6
+													<input  name='options[]' type="checkbox" class="option justone" value='topic 1 '>
+													<span class="checkmark"></span>
+												</label>
+											</li>
+										</ul>
+									  </div>
+								 </li>
+								 <li class="fageulli">
+									<div class="btn-group btn-block dropdown todosn" id="todos">
+										<button class="btn  btn-default dropdown-toggle botn-todos" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="intoradio">Low to High</span>
+										<span class="caret caret-posicion"></span>
+										</button>
+										<ul class="dropdown-menu ancho-todos" aria-labelledby="dropdownMenu1">
+										    <li class="activeto">
+												<input type="radio" id="low-option"  name="price" value="h" checked>
+												<label for="low-option" class="checkdiop"> Low to High</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="high-option"  name="price" value="h" >
+												<label for="high-option" class="checkdiop"> High to Low</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="med-option"  name="price" value="h">
+												<label for="med-option" class="checkdiop"> Medium</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											
+										</ul>
+									  </div>
+								 </li>
+								 <li class="fageulli">
+									<div class="btn-group btn-block dropdown todosn" id="todos">
+										<button class="btn btn-default dropdown-toggle botn-todos" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="spanzu">Zuletzt verwendet :</span> <span class="intoradio">Letztes Jahr</span>
+										<span class="caret caret-posicion"></span>
+										</button>
+										<ul class="dropdown-menu ancho-todos" aria-labelledby="dropdownMenu1">
+											<li class="activeto">
+												<input type="radio" id="r1a-option"  name="vor" value="A" checked>
+												<label for="r1a-option" class="checkdiop"> Letztes Jahr</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+										    <li>
+												<input type="radio" id="r1b-option"  name="vor" value="B">
+												<label for="r1b-option" class="checkdiop"> Vor 3 Jahren</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="r1c-option"  name="vor" value="c">
+												<label for="r1c-option" class="checkdiop"> Vor 5 Jahren</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="r1d-option"  name="vor" value="d">
+												<label for="r1d-option" class="checkdiop"> Vor 10 Jahren</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+											<li>
+												<input type="radio" id="r1e-option"  name="vor" value="e">
+												<label for="r1e-option" class="checkdiop">Uber 10 Jahren</label>
+												<div class="check"><div class="inside"></div></div>
+											</li>
+										</ul>
+									  </div>
+								 </li>
+								
+								 <li class="fageulli">
+									<div class="btn-group btn-block dropdown weitere" >
+										<button class="btn btn-default dropdown-toggle botn-weitere" type="button" id="weitere" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="bi bi-plus-lg"></i> weitere Filter
+											<i class="bi bi-filter" style="opacity:0.6"></i>
+										</button> 
+											<div class="dropdown-menu  dropdown-large-tabs" aria-labelledby="weitere" >
+												<ul class="nav nav-tabs" id="myTab">
+												  <li class="active"><a data-target="#topic" data-toggle="tab">Topic</a></li>
+												  <li><a data-target="#question" data-toggle="tab">Question</a></li>
+												  <li><a data-target="#other" data-toggle="tab">Other</a></li>
+												</ul>
+											
+												<div class="tab-content">
+												  <div class="tab-pane fade in active" id="topic">
+													<form class="searcdear">
+														<div class="form-group">
+														  <input type="text" class="form-control" placeholder="Search.." id="tabsearchfi" onkeyup="tabsearch()">
+														  <i class="bi bi-search"></i>
+														</div>
+														
+													  </form>
+													  <p class="weiter-p"><span><img src="img/icon/file.svg"></span><span>Welche Stromart</span><span>.</span><span>32 filter items</span></p>
+													  <p class="weiter-p"><span><img src="img/icon/file.svg"></span><span> Reifenbreite</span><span>.</span><span>12 filter items</span></p>
+													  <p class="weiter-p"><span><img src="img/icon/file.svg"></span><span>Science</span><span>.</span><span>34 filter items</span></p>
+													  <p class="weiter-p"><span><img src="img/icon/file.svg"></span><span>Math</span><span>.</span><span>42 filter items</span></p>
+													  <p class="weiter-p"><span><img src="img/icon/file.svg"></span><span>Geology</span><span>.</span><span>23 filter items</span></p>
+													  
+												  </div>
+												  <div class="tab-pane fade" id="question">Question</div>
+												  <div class="tab-pane fade" id="other">Other</div>
+												</div>
+											  </div>
+									  </div>
+								 </li>
+								 <li class="fageulli kenpar">
+									<button type="button" class="btn btn-primary btn-block projekenbutton">
+										<label class="checkdesign"><span class="txtover">Projektfraje</span> 
+											<input  name='proje' type="checkbox" class="proje" value='proje '>
+											<span class="checkmark"></span>
+										</label>
+									</button>
+								 </li>
+								 <li class="fageulli">
+									<button type="button" class="btn btn-primary btn-block projekenbutton">
+										<label class="checkdesign"><span class="txtover">Kennisfrage ohne Projekt</span> 
+											<input  name='proje' type="checkbox" class="proje" value='proje '>
+											<span class="checkmark"></span>
+										</label>
+									</button>
+								 </li>
+							 </ul>
+							 <br> <br>
+						</div>
+                    </div>
+                </div>
+            </div>
+            <br>
+			<div class="row">
+                <div class="col-md-12">
+					<div class="jumbotron fargeassin">
+						<div class="table-responsive">
+							<table class="table table-striped">
+							
+							<thead>
+								<tr>
+									<th scope="col">
+										<label class="checkdesign"><span class="txtover">NR.</span> 
+											<input   type="checkbox" class="selectalldfr" >
+											<span class="checkmark"></span>
+										</label>
+									</th>
+									<th scope="col">Art DER FARge</th>
+									<th scope="col">Frage</th>
+									<th scope="col">Aktionen</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr></tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">01</span> 
+										<input type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre1 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Woran ist der Hochvoltkabelstrang im Kraftfahrzeug zu erkennen?</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">02</span> 
+										<input  type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre2 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Eine defekte Glühlampe soll ersetzt werden. Worauf ist bei der Auswahl der Ersatzglühlampe unter anderem zu achten?</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">03</span> 
+										<input  type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre3 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Welche Stromart entsteht in den Ständerwicklungen eines Drehstromgenerators?</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">04</span> 
+										<input  type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre4 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Auf einem Kundenfahrzeug ist folgendes Rad montiert: Reifenbreite b = 205 mm, Felgendurchmesser d = 381 mm und Reifenhöhe h = 133,25 mm.</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">05</span> 
+										<input  type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre5 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Welches Messgerät wird im Bild gezeigt?</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							  <tr>
+								<td>
+									<label class="checkdesign"><span class="txtover">06</span> 
+										<input  type="checkbox" name='dbfre[]' type="checkbox" class="dbfre justdf" value='dbfre6 '>
+										<span class="checkmark"></span>
+									</label>
+								</td>
+								<td>
+									<p>Single-Choice Frage</p>
+								</td>
+								<td class="midelfar">
+									<p>Nennen Sie vier Punkte, die bei der Sichtprüfung und Montage von Bremsleitungen besonders zu beachten sind.</p>
+								</td>
+								<td>
+									<div class="btn-group">
+                                        <a type="button" href="#" class="btn btn-primary assign"><i class="bi bi-check-circle-fill"></i> Assign Question</a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft1"><i class="fa fa-edit"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivleft2"><i class="bi bi-trash"></i></a>
+										<a type="button" href="#" class="btn btn-primary icodivleft icodivlef3"><i class="bi bi-three-dots-vertical"></i></a>
+									</div>
+								</td>
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+						<div class="quesdbcounting">
+                           <div class="row">
+							   <div class="col-sm-4">
+                                  <p class="showing">Showing 9 from 49 Entires </p>
+							   </div>
+							   <div class="col-sm-8">
+								<div class="pagination">
+									<ul> <!--pages or li are comes from javascript --> </ul>
+								  </div>
+							   </div>
+						   </div>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+	   </div>
+	<!-- /#page-content-wrapper -->
+   </div>
+</div>
+   
+ <div class="modal fade" id="addnew" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog opacity-animate3">
+	  <div class="modal-content">
+	   <div class="modal-header">
+		   <p>Add new question</p>
+		   <p><button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="bi bi-x-lg"></i></button></p>
+	   </div>
+		<div class="modal-body">
+		   <div class="row">
+			   <div class="col-md-8 neuefarge">
+					<div class="media">
+						<div class="media-left">
+						<a href="#">
+							<img class="media-object" src="img/icon/ad1.svg"...">
+						</a>
+						</div>
+						<div class="media-body">
+						<h4 class="media-heading">Neue Frage hinzufügen</h4>
+						<p>Audience to which the users lorem ipsum dolor sit amet</p>
+						</div>
+					</div>
+			   </div>
+               <div class="col-md-4 verwalnet">
+                   <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Verwalten von Fragen</button>
+			   </div>
+		   </div>
+		   <br>
+		   <div class="row artform">
+			<form>
+				<div class="form-group">
+				  <label for="exampleInputEmail1">Art der Frage :</label>
+				  <div class="custom-select" style="width:100%">
+					<select>
+					  <option value="0">Benennungsfrage (mit 3D-Modell)</option>
+					  <option value="1">Audi</option>
+					  <option value="2">BMW</option>
+					  <option value="3">Citroen</option>
+					  <option value="4">Ford</option>
+					  <option value="5">Honda</option>
+					  <option value="6">Jaguar</option>
+					  <option value="7">Land Rover</option>
+					  <option value="8">Mercedes</option>
+					  <option value="9">Mini</option>
+					  <option value="10">Nissan</option>
+					  <option value="11">Toyota</option>
+					  <option value="12">Volvo</option>
+					</select>
+				</div>
+				</div>
+				<div class="form-group frasvgdinput">
+				  <label for="exampleInputPassword1">Fragestellung :</label>
+				  <input class="form-control" placeholder="Fragestellung">
+				</div>
+			  </form>
+		   </div>
+		  <div class="row threedred">
+			  <div class="col-md-12">
+				  <button class="btn btn-primary"><i class="bi bi-box"></i> 3D Rendering Anfordern</button>
+			  </div>
+		  </div>
+		  <div class="row forminlinr1">
+			  <label>Lösungsvorschlag :</label>
+			  <br>
+			<div class="col-sm-7">
+			  <input type="text" class="form-control" placeholder="Sed ut perspiciatis unde omnis iste natus error sit ">
+			</div>
+			<div class="col-sm-5">
+			  <input type="text" class="form-control" placeholder="Points">
+			</div>
+		  </div>
+		  <div class="row geeignet">
+			<p>Geeignet für  <i class="bi bi-chevron-down"></i></p>
+			<br>
+			<h5>Prüfungsteile :</h5>
+			  <div class="col-md-12">
+				<label class="checkdesign"><span class="txtover">AP Teil 1</span> 
+					<input  type="checkbox" name='ap[]' type="checkbox" class="ap apjust" value='ap '>
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkdesign"><span class="txtover">ZP Teil 1</span> 
+					<input  type="checkbox" name='zp[]' type="checkbox" class="zp zpjust" value='zp '>
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkdesign"><span class="txtover">AP Teil 2</span> 
+					<input  type="checkbox" name='ap[]' type="checkbox" class="ap apjust" value='ap '>
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkdesign"><span class="txtover">ZP Teil 2</span> 
+					<input  type="checkbox" name='zp[]' type="checkbox" class="zp zpjust" value='zp '>
+					<span class="checkmark"></span>
+				</label>
+				<br><br><br>
+				<div class="ausille">
+					<h5>Ausbildungslänge  :</h5>
+					
+				<label class="checkdesign"><span class="txtover">2 Jahre</span> 
+					<input  type="checkbox" name='jar[]' type="checkbox" class="jar jarjust" value='jare2 '>
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkdesign"><span class="txtover">3,5 Jahre</span> 
+					<input  type="checkbox" name='jare[]' type="checkbox" class="jare jarejust" value='jare1 '>
+					<span class="checkmark"></span>
+				</label>
+				</div>
+				
+			  </div>
+		  </div>
+		  <br>
+		  <div class="row geeignet">
+			<p>Fragenzuordnung :</p>
+			<br>
+			
+			  <div class="col-md-12">
+				<label class="checkdesign"><span class="txtover">Kentnissfrage ohne Projekt</span> 
+					<input  type="checkbox" name='ken[]' type="checkbox" class="ap apjust" value='ap '>
+					<span class="checkmark"></span>
+				</label>
+				<label class="checkdesign"><span class="txtover">Projektfrage</span> 
+					<input  type="checkbox" name='projk[]]' type="checkbox" class="zp zpjust" value='projk '>
+					<span class="checkmark"></span>
+				</label>
+				
+				</div>
+				
+			  </div>
+			  <div class="row geeignet">
+				
+				  <div class="col-md-12">
+					  <h3 style="display: inline-block;font-size: 18px;font-weight: 600;color: 2E2C34;margin-right: 10px;">Punktzahl festlegen</h3>
+					<label class="checkdesign"><span class="txtover">Standard beibehalten: 1 Punkt</span> 
+						<input  type="checkbox" name='stan[]' type="checkbox" class="ap apjust" value='stan '>
+						<span class="checkmark"></span>
+					</label>
+				
+					</div>
+					
+				  </div>
+				  <div class="row artform">
+					<form>
+						<div class="form-group">
+						  
+						  <div class="custom-select" style="width:100%">
+							<select>
+							  <option value="0">Select car:</option>
+							  <option value="1">Audi</option>
+							  <option value="2">BMW</option>
+							  <option value="3">Citroen</option>
+							  <option value="4">Ford</option>
+							  <option value="5">Honda</option>
+							  <option value="6">Jaguar</option>
+							  <option value="7">Land Rover</option>
+							  <option value="8">Mercedes</option>
+							  <option value="9">Mini</option>
+							  <option value="10">Nissan</option>
+							  <option value="11">Toyota</option>
+							  <option value="12">Volvo</option>
+							</select>
+						</div>
+						</div>
+
+					  </form>
+				   </div>
+				   <div class="row towbtn">
+					   <div class="col-md-12">
+						   <div class="btn-group">
+                               <a href="#" class="btn btn-primary">Frage speichern</a>
+							   <a href="#" class="btn btn-primary"><i class="bi bi-file-break"></i> Frage speichern und einreichen</a>
+						   </div>
+					   </div>
+				   </div>
+		  </div>
+		</div>
+		
+	  </div>
+	</div>
+ 
+
+
+
+
+
+
+
+	<div class="modal fade" id="stepques" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog opacity-animate3">
+		  <div class="modal-content">
+		   <div class="modal-header">
+			   <p style="visibility: hidden;">...........</p>
+			   <p><button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="bi bi-x-lg"></i></button></p>
+		   </div>
+			<div class="modal-body">
+			   <div class="row">
+				   <div class="col-md-8 neuefarge">
+						<div class="media" style="margin-left: -10px;">
+							<div class="media-left">
+							<a href="#">
+								
+							</a>
+							</div>
+							<div class="media-body">
+							<h4 class="media-heading">Neue Frage hinzufügen</h4>
+							<p>Audience to which the users lorem ipsum dolor sit amet</p>
+							</div>
+						</div>
+				   </div>
+				   <div class="col-md-4 verwalnet">
+					   <button class="btn btn-primary"><i class="bi bi-plus-lg"></i> Verwalten von Fragen</button>
+				   </div>
+			   </div>
+			    <br>
+                <div class="row multisetupform">
+					<div class="col-md-12">
+						<!-- multistep form -->
+						<form id="msform">
+							<!-- progressbar -->
+							<ul id="progressbar">
+							<li class="active"><br><span>Schritt 1</span></li>
+							<li><br><span>Schritt 2</span> </li>
+							<li><br><span>Schritt 3</span></li>
+							<li><br><span>Schritt 4</span></li>
+							</ul>
+							<!-- fieldsets -->
+							<fieldset>
+								<div class="row artform">
+										<div class="">
+										<label for="exampleInputEmail1">Art der Frage :</label>
+										<div class="custom-select" style="width:100%">
+											<select>
+											<option value="0">Benennungsfrage (mit 3D-Modell)</option>
+											<option value="1">Audi</option>
+											<option value="2">BMW</option>
+											<option value="3">Citroen</option>
+											<option value="4">Ford</option>
+											<option value="5">Honda</option>
+											<option value="6">Jaguar</option>
+											<option value="7">Land Rover</option>
+											<option value="8">Mercedes</option>
+											<option value="9">Mini</option>
+											<option value="10">Nissan</option>
+											<option value="11">Toyota</option>
+											<option value="12">Volvo</option>
+											</select>
+										</div>
+										</div>
+										<br>
+										<div class=" frasvgdinput">
+											<label for="exampleInputPassword1">Fragestellung :</label>
+											<input class="form-control" placeholder="Fragestellung">
+										</div>
+										
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-12">
+										<label style="opacity: 0.7;font-size: 14px;margin-bottom: -10px;">3d-Modell hochladen :</label>
+										<div class="drop-zone">
+											<p class="up"><i class="bi bi-cloud-arrow-up"></i></p>
+											<span class="drop-zone__prompt">Drag and Drop order <p>Browser</p> fur upload (max 2Mb)</span>
+											<input type="file" name="myFile" class="drop-zone__input">
+										</div>
+									</div>
+								</div>
+								<br><br>
+								<div class="row textebox">
+									
+									<div class="col-sm-12">
+										<label style="opacity: 0.7;font-size: 14px;margin-bottom: 4px;">Lösungsvorschlag :</label>
+										<textarea class="form-control" rows="5" placeholder="Lösungsvorschlag"></textarea>
+									</div>
+		                         </div>
+		 
+		     <input type="button" name="next" class="next towbtn action-button" value="Frage speichern und nächste >" />
+	</fieldset>
+	<fieldset>
+	  <h2 class="fs-title">step 2
+		<br><br><br><br><br><br><br><br><br><br><br>
+	  </h2>
+	  
+	   <input type="button" name="next" class="next  towbtn action-button" value="Frage speichern und nächste >" />
+	  <input type="button" name="previous" class="previous towbtn action-button" value="< Frage speichern" />
+	 
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">step 3
+			<br><br><br><br><br><br><br><br><br><br><br>
+		  </h2>
+
+	
+		  <input type="button" name="next" class="next  towbtn action-button" value="Frage speichern und nächste >" />
+		  <input type="button" name="previous" class="previous towbtn action-button" value="< Frage speichern" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">step 4
+			<br><br><br><br><br><br><br><br><br><br><br>
+		  </h2>
+
+	
+	  <input type="submit" name="submit" class="submit towbtn action-button" value="Submit" /> 
+	   <input type="button" name="previous" class="previous towbtn action-button" value="< Frage speichern" />
+	</fieldset>
+
+
+  </form>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+			
+				
+			  </div>
+			</div>
+			
+		  </div>
+		</div>
+
+
+
+
+            <script src="js/bootstrap.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+			<script src="js/index.js"></script>
+			<script src="js/quesdb.js"></script>
+		   
+<script src="http://thecodeplayer.com/uploads/js/jquery.easing.min.js" type="text/javascript"></script>
+<script>
+	
+</script>
+    </body>
+</html>

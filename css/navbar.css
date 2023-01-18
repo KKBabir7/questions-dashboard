@@ -1,0 +1,545 @@
+/*...........top navbar menu..........*/
+.navbar{
+    height: 70px;
+    border: none;
+    background: var(--white);
+    box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.05);
+    border-radius: 0px;
+}
+.navbar .navbar-brand {
+    margin-top: -8px;
+}
+.navbar .navbar-right li{
+    padding-top: 10px;
+}
+.navbar .navbar-right li a{
+    font-size: 20px;
+    color: var(--iconbg);
+}
+.navbar .navbar-right li a:hover,.navbar .navbar-right li a:focus{
+    color: var(--iconbg);
+}
+.navbar .navbar-right .profile img{
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-top: -8px;
+}
+.navbar .navbar-right .dot a::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 100px;
+    right: 20px;
+    background: var(--dot);
+}
+.navbar .navbar-right .profile{
+    position: relative;
+}
+.navbar .navbar-right .profile i{
+    position: absolute;
+    top: 40px;
+    color: #ff991F;
+    background: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    right: 10px;
+}
+/*...........sidebar menu page content sliding..........*/
+.no-margin {
+    margin: 0;
+ }
+ #wrapper {
+    padding-left: 250px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    overflow: hidden;
+ }
+ 
+ #wrapper.toggled {
+    padding-left: 250px;
+    overflow: hidden;
+ }
+ #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  
+ }    
+ #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+ }
+ #wrapper.toggled-2 #sidebar-wrapper {
+    width: 70px;
+ }
+
+/*...........sidebar menu..........*/
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--bluebg);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+ }
+ #sidebar-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+#sidebar-wrapper{
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+  }
+ .sidebar-nav{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 99%;
+    margin: 0;
+    padding-left: 8;
+    padding-right: 10;
+    list-style: none;
+    margin-top: 2px;
+    display: block;
+ }
+ .nav-pills > li > a {
+    border-radius: 0;
+ }
+.sidebarlogo {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.sidebarlogo p{
+    display: inline-block;
+}
+.sideimgsec{
+     width: 60;
+  height: 30;
+  transition: all 0.5s ease;
+}
+.sideimgsecclick{
+    width: 0;
+    height: 0;
+    transition: all 0.5s ease;
+}
+.sidebarlogo p:nth-child(2){
+    float: right;
+    margin-top: -8px;
+}
+.headernav{
+    padding-left: 250px;
+    position: fixed;
+    width: 100%;
+    transition: all 0.5s ease;
+    z-index: 800;
+}
+.headernavclick{
+    padding-left: 70px;
+    transition: all 0.5s ease;
+}
+.onoff {
+   color: var(--white);
+   transition: all 0.5s ease;
+   font-size: 25px;
+   padding: 0px 0px !important;
+   margin-right: 5px !important;
+}
+.onoff::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: var(--gray);
+    right: 2;
+    top: 5px;
+}
+.onoff::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: var(--gray);
+    opacity: 0.3;
+    right: 2;
+    bottom: 5px;
+}
+.onoffclick{
+    transform: rotate(180deg);
+    transition: all 0.5s ease;
+}
+.homemenu{
+    color: var(--gray);
+    margin-top: 20px;
+   margin-bottom: 10px;
+    height: 30px;
+    padding-left: 8px;
+    padding-right: 10px;
+    font-size: 12px;
+  
+    transition: all 0.5s ease;
+    visibility: visible;
+}
+.homemenuclick{
+    height: 0px;
+    font-size: 0px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.homemenu p{
+     display: inline-block;
+}
+.homemenu p:nth-child(2){
+    float: right;
+    color: var(--white);
+    margin-top: -5px;
+}
+ .nav-stacked{
+     padding: 0;
+     margin: 0;
+ }
+ .nav-stacked li {
+    line-height: 40px;
+    display: block;
+    width: 100%;
+ }
+ 
+.nav-stacked li a {
+    display: block;
+    text-decoration: none;
+    color: var(--gray);
+    width: 100%;
+    font-size: 14px;
+    font-weight: var(--fw);
+    border-radius: 7px;
+    padding: 6px 17px;
+    height: 50px;
+    transition: all 0.3s ease;
+ }
+.nav-stacked li a:hover {
+    text-decoration: none;
+    color: var(--white);
+    background: var(--hb);
+    
+}
+.nav-stacked li.active .inconformenu i{
+  stroke: var(--white);
+ }
+
+.nav-stacked li .inconformenu i{
+  font-size: 18px;
+  margin-right: 16px;
+  margin-top: 11px;
+  position: absolute;
+ }
+
+ .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    text-decoration: none;
+    background: var(--hb);
+ }
+ .nav-stacked .message{
+     position: relative;
+ }
+ .nav-stacked .message .notfi{
+  background: red;
+
+  position: absolute;
+  right: 10;
+  height: 28px;
+  padding: 7px 8px 6px 8px;
+  margin: 0;
+  text-overflow: ellipsis;
+  top: 12px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s ease;
+  display: flex;
+  border-radius: 100px;
+  
+ }
+ .nav-stacked .message .notficlick{
+  font-size: 10px;
+  height: 20px;
+  top: 2px;
+  right: 3px;
+  padding: 4px 4px 4px 4px;
+  transition: all 0.5s ease;
+ }
+ .nav-stacked .logoumenu{
+     position: absolute;
+     bottom: 20;
+    width: fit-content;
+ }
+ .nav-stacked .logoumenu a:hover{
+   color: var(--white) !important;
+   background: none !important;
+ }
+ .sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+ }
+ 
+ .sidebar-nav > .sidebar-brand a {
+    color: #999999;
+ }
+ 
+ .sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+ }
+ .nav-stacked li a .contentli{
+    visibility: visible;
+   font-size: 14px;
+   margin-left: 28px;
+   opacity: 1;
+   transition: font-size 0.5s ease;
+ }
+.nav-stacked a .contentli1{
+   visibility: hidden;
+   font-size: 0px;
+   opacity: 0;
+   transition: all 0.5s ease;
+}
+
+/*...........page content..........*/
+ .xyz {
+    min-width: 360px;
+ }
+    
+ #page-content-wrapper {
+    padding: 15px;
+    margin-top: 70px;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+ }
+ #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    padding-left: 250px;
+ }
+ #wrapper.toggled-2 #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    margin-left: -180px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: auto;
+ }
+ #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0px;
+ }
+ 
+
+
+
+
+ @media screen and (max-width: 1192px) {
+    #wrapper #sidebar-wrapper{
+     width: 70px;
+    }
+    .nav-stacked li a .contentli {
+      visibility: hidden;
+      font-size: 0px;
+      margin-left: 28px;
+      opacity: 0;
+      transition: font-size 0.5s ease;
+  }
+  .homemenu{
+    visibility: hidden;
+    width: 0;
+    font-size: 0px;
+  }
+  .sideimgsec{
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+  }
+  #page-content-wrapper{
+    margin-left: -180px;
+  }
+  .headernav{
+    padding-left: 70px;
+  }
+  .sidebarlogo p:nth-child(2){
+    display: none;
+  }
+  .nav-stacked .message .notfi {
+    background: red;
+    position: absolute;
+    right: 0;
+    height: 20px;
+    padding: 3px 4px 3px 4px;
+    margin: 0;
+    text-overflow: ellipsis;
+    top: 1px;
+    font-size: 12px;
+   
+  }
+
+  
+  }
+  @media screen and (max-width: 617px) {
+    .navbar-default .navbar-nav > li{
+        margin-top: 10px;
+    }
+    .navbar-default .navbar-nav > li > a{
+        padding: 5px;
+    }
+  
+}
+  @media screen and (max-width: 592px) {
+    .navbar-brand > img{
+        width: 180px;
+        margin-top: 9px;
+    }
+    .navbar-default .navbar-right {
+        margin-right: -10px;
+    }
+   
+  }
+  @media screen and (max-width: 492px) {
+    #page-content-wrapper{
+        padding: 0;
+        
+    padding-bottom: 80px;
+    }
+    #wrapper #sidebar-wrapper{
+        width: 100%;
+        height: 45px;
+        bottom: 0;
+        overflow-y:hidden;
+        position: fixed;
+        right: 0;
+    }
+    .navbar-toggle{
+        background: none !important;
+        border: none !important;
+        margin-top: 9px;
+    }
+    .nav-stacked{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: -2;
+        width: 100%;
+    }
+    .nav-stacked li {
+        line-height: 0px;
+        display: inline-block;
+        width: 15.5%;
+        padding: 0px;
+        margin: 0px;
+        top: 0;
+        text-align: center;
+    }
+    .nav-stacked li a{
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        display: inline-block;
+        background: none !important;
+    }
+    .nav-stacked li .inconformenu i{
+        margin: 0px !important;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+        background: transparent !important;
+    }
+    .nav-stacked .message .notfi {
+        background: red;
+        right: 15;
+        height: 15px;
+        padding: 2px 4px 2px 3px;
+        top: 3px;
+        font-size: 10px;
+    }
+    .headernav{
+        padding-left: 0px;
+    }
+    .xyz {
+        min-width: 100%;
+    }
+    #page-content-wrapper {
+        margin-left: -250px;
+    }
+    .navbar-brand > img{
+        width: 150px;
+        margin-top: 2px;
+    }
+    .navbar{
+        height: auto;
+    }
+    .navbar .navbar-right li{
+        display: inline-block;
+    }
+    .navbar-default .navbar-nav > li{
+        margin-top: -5px;
+    }
+    .navbar-default .navbar-nav > li > a{
+        padding: 10px;
+    }
+    .nav-stacked .logoumenu {
+        position: fixed;
+        top: 4;
+        right: 50px;
+        width: fit-content;
+    }
+
+  }
+  
+  
+  @media only screen and (min-width: 492px) {
+    .collapse {
+        display: block;
+    }
+
+    .navbar-header {
+        float: left;
+    }
+      
+    .navbar-toggle {
+        display: none;
+    }
+  
+    .navbar-nav {
+       float: right;
+       margin: 0;
+    }
+    .navbar-nav>li {
+        float: left;
+    }
+      .navbar-nav>li>a {
+            padding-top: 15px;
+    padding-bottom: 15px;
+        }
+}
+
+@media only screen and (max-width: 492px) {
+     .collapse {
+        display: none;
+     }
+
+     .navbar-header {
+        display: block;
+     }
+}

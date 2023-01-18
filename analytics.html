@@ -1,0 +1,485 @@
+
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>
+            Analytics
+		</title>
+		<link rel="icon" href="img/calicon.png" type="image/png" sizes="16x16">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/navbar.css"> 
+		<link rel="stylesheet" href="css/style.css"> 
+    </head>
+    <style>
+			img{
+			image-rendering: -moz-crisp-edges !important;       
+			image-rendering:   -o-crisp-edges !important;       
+			image-rendering: -webkit-optimize-contrast !important;
+			image-rendering: crisp-edges !important;
+			-ms-interpolation-mode: nearest-neighbor !important;
+		}
+    </style>
+    <body>
+<!----------header----------->
+	<header class="headernav" id="headernav">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo/top-logo.svg"></a>
+			  </div>
+		  
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<ul class="nav navbar-nav navbar-right">
+				  <li><a href="#"><i class="bi bi-bell-fill"></i></a></li>
+				  <li class="dot"><a href="#"><i class="fa fa-comments"></i></a></li>
+				  <li><a href="#"> <i class="bi bi-grid-3x3-gap-fill"></i></a></li>
+				  <li class="profile"><a href="#"><img src="img/profile/peter.jpg"></a><i class="bi bi-plus-circle-fill"></i></li>
+				 
+				</ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		  </nav>
+	</header>
+
+    <div id="wrapper">
+	<!-- Sidebar -->
+	   <div id="sidebar-wrapper">
+		    <div  class="sidebar-nav">
+				<div class="sidebarlogo">
+					<p><img  id="sideimgsec" class="sideimgsec" src="img/logo/side-logo.png"></p>
+					<p><button class="navbar-toggle collapse in onoff" data-toggle="collapse" id="menu-toggle-2"> <i class="bi bi-arrow-left"></i>
+				</button></p>
+				</div>
+				<div class="homemenu" id="homemenu">
+					<p>Home</p>
+					<p>...</p>
+				</div>
+			    <ul class="nav-pills nav-stacked" id="menu">
+				   <li >
+					    <a href="index.html"><span class="inconformenu"><i class="bi bi-grid-fill"></i>
+						</span> <span id="contentli" class="contentli"> Dashboard</span> </a>
+					 
+				    </li>
+				    <li class="active">
+					    <a href="analytics.html"><span class="inconformenu"><i class="bi bi-file-bar-graph"></i>
+						</span><span id="contentli" class="contentli"> Analytics</span> </a>
+				    </li>
+				    <li>
+					    <a href="quesdb.html"> <span class="inconformenu"><i class="bi bi-card-text"></i> 
+						</span><span id="contentli" class="contentli">Question Database</span> </a>
+				    </li>
+				    <li>
+					    <a href="#"><span class="inconformenu"><i class="bi bi-credit-card"></i></span> <span id="contentli" class="contentli">Account</span> </a>
+				    </li>
+				    <li class=" message">
+					    <a href="#"><span class="inconformenu"><i class="bi bi-chat-square-text"></i>
+						</span> <span id="contentli" class="contentli">Message</span> </a>
+						<h3 class="notfi" id="notfi">30</h3>
+				    </li>
+				    <li >
+					    <a href="#"><span class="inconformenu"><i class="bi bi-gear"></i>
+						</span><span id="contentli" class="contentli">Settings</span> </a>
+				    </li>
+				    <li  class=" logoumenu">
+					    <a href="#"><span class="inconformenu">
+						<i class="bi bi-box-arrow-right"></i>
+					   </span> <span id="contentli" class="contentli">Logout</span> </a>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+	<!-- /#sidebar-wrapper -->
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+	   <div class="container-fluid xyz">
+		  <div class="row">
+			<div class="col-md-8">
+                <div class="row">
+					<div class="col-lg-4">
+                        <div class="jumbotron noch-jum">
+                             <h2>Prüfung 3</h2>
+							 <p>Noch 30 Tage bis zur<br>Deadline.</p>
+							 <center>
+								<div class="progress">
+									<div class="barOverflow">
+									  <div class="bar"></div>
+									</div>
+									<p class="barpr">
+									<span class="bar-text"><strong>60</strong></span>%</p>
+									<p class="complete">Complete</p>
+								  </div>
+							</center>
+						</div>
+					</div>
+					<div class="col-lg-8">
+                        <div class="jumbotron tab-progress">
+							<div class="tbpro-heading">
+								<h1>Progress</h1>
+								<p>Fortschritt der verschiedenen Themengebiete</p>
+							</div>
+                            <div class="row">
+								<div class="col-md-6">
+									<div class="media">
+										<div class="media-left">
+										  <a href="#">
+											<img class="media-object" src="img/icon/g1.svg" alt="...">
+										  </a>
+										</div>
+										<div class="media-body">
+											<h4>Part 1</h4>
+											<div class="progress">
+												<div class="progress-bar" style="width:55%; background:var(--cscolor);"></div>
+											</div><span class="progress-title" style=""><span>55</span>%</span>
+										   <p>Themengebied 1</p>
+										</div>
+									  </div>
+								</div>
+								<div class="col-md-6">
+									<div class="media">
+										<div class="media-left">
+										  <a href="#">
+											<img class="media-object" src="img/icon/g2.svg" alt="...">
+										  </a>
+										</div>
+										<div class="media-body">
+											<h4>Part 2</h4>
+											<div class="progress">
+												<div class="progress-bar" style="width:45%; background:var(--cscolor);"></div>
+											</div><span class="progress-title" style=""><span>45</span>%</span>
+										   <p>Themengebied 1</p>
+										</div>
+									  </div>
+								</div>
+							</div>
+							<div class="row progressdiv">
+								<div class="col-md-6">
+									<div class="media">
+										<div class="media-left">
+										  <a href="#">
+											<img class="media-object" src="img/icon/g3.svg" alt="...">
+										  </a>
+										</div>
+										<div class="media-body">
+											<h4>Part 3</h4>
+											<div class="progress">
+												<div class="progress-bar" style="width:85%; background:var(--cscolor);"></div>
+											</div><span class="progress-title" style=""><span>85</span>%</span>
+										   <p>Themengebied 1</p>
+										</div>
+									  </div>
+								</div>
+								<div class="col-md-6">
+									<div class="media">
+										<div class="media-left">
+										  <a href="#">
+											<img class="media-object" src="img/icon/g4.svg" alt="...">
+										  </a>
+										</div>
+										<div class="media-body">
+											<h4>Part 4</h4>
+											<div class="progress">
+												<div class="progress-bar" style="width:63%; background:var(--cscolor);"></div>
+											</div><span class="progress-title" style=""><span>63</span>%</span>
+										   <p>Themengebied 1</p>
+										</div>
+									  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br><br>
+               <div class="row" style="margin-top: 15px;">
+				   <div class="col-md-12">
+					<div class="jumbotron ques-history">
+						<div class="row">
+							<div class="col-md-12">
+								<h2>Question History</h2>
+							 <div class="table-responsive">
+								 <table class="table table-striped">
+									 <thead>
+									 <tr>
+										 <th>NR.</th>
+										 <th>Art Der Frage</th>
+										 <th>Frage</th>
+										 <th>Type</th>
+										 <th>Date created</th>
+									 </tr>
+									 </thead>
+									 <tbody>
+										 <tr>
+											 </tr>
+									 <tr>
+										 <td>1</td>
+										 <td>Single-Choice Frage</td>
+										 <td class="small">Woran ist der Hochvoltkabelstrang im Kraftfahrzeug zu erkennen?</td>
+										 <td>
+											 <div class="btn-group">
+												<a href="#" class="btn btn-primary">Erstellt</a>
+												<a href="#" class="btn btn-primary">Verschickt</a>
+											 </div>
+										 </td>
+										 <td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+									 </tr>
+									 <tr>
+										 <td>2</td>
+										 <td>Single-Choice Frage</td>
+										 <td class="small">Welche Stromart entsteht in den Ständerwicklungen eines Drehstromgenerators?</td>
+										 <td>
+											 <div class="btn-group">
+												<a href="#" class="btn btn-primary">Erstellt</a>
+												<a href="#" class="btn btn-primary">Verschickt</a>
+											 </div>
+										 </td>
+										 <td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+									 </tr>
+									 <tr>
+										 <td>3</td>
+										 <td>Single-Choice Frage</td>
+										 <td class="small">Auf einem Kundenfahrzeug ist folgendes Rad montiert: Reifenbreite b = 205 mm, Felgendurchmesser d = 381 mm und ...</td>
+										 <td>
+											 <div class="btn-group">
+												<a href="#" class="btn btn-primary">Erstellt</a>
+												<a href="#" class="btn btn-primary">Verschickt</a>
+											 </div>
+										 </td>
+										 <td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+									 </tr>
+									 <tr>
+										 <td>4</td>
+										 <td>Single-Choice Frage</td>
+										 <td class="small">Nennen Sie vier Punkte, die bei der Sichtprüfung und Montage von Bremsleitungen besonders zu beachten sind.</td>
+										 <td>
+											 <div class="btn-group">
+												<a href="#" class="btn btn-primary">Erstellt</a>
+												<a href="#" class="btn btn-primary">Verschickt</a>
+											 </div>
+										 </td>
+										 <td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+									 </tr>
+									 </tbody>
+								 </table>
+							   </div>
+							   <h1>Load More <i class="bi bi-chevron-down"></i></h1>
+							</div>
+						</div>
+					</div>
+				   </div>
+			   </div>
+			   <div class="row">
+				<div class="col-lg-6">
+					<div class="jumbotron pool-jum">
+						 <div class="pool-head">
+                              <p>Poll Overview</p>
+							  <h2>982</h2>
+						 </div>
+                         <center>
+							 <div class="poolsecton">
+								 <img src="img/icon/e3.svg">
+								 <h2>View Poll</h2>
+								 <p><span>1,425 Vote</span><span>.</span><span>4 Days left</span><span>.</span><span>Pool Open</span></p>
+							 </div>
+						 </center>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="jumbotron main-drop-media-jum berudropjum">
+						<div class="row main-drop-media">
+							<div class="col-lg-12">
+								<a href="" class="allmedia">
+									<div class="media">
+										<div class="media-left">
+											<img class="media-object" src="img/icon/e1.svg" alt="...">
+										</div>
+										<div class="media-body" style="padding-top: 10px;">
+										<h4 class="media-heading" style="height: 25px;">Add  Participant</h4>
+										<p>1,324 In the list </p>
+										</div>
+										<i class="bi bi-chevron-right rightarrow"></i>
+									</div>
+								</a>
+							</div>
+							<div class="col-lg-12" style="margin-top: 20px;">
+								<a href="" class="allmedia">
+									<div class="media">
+										<div class="media-left">
+											<img class="media-object" src="img/icon/e2.svg" alt="...">
+										</div>
+										<div class="media-body" style="padding-top: 10px;">
+										<h4 class="media-heading" style="height: 25px;">Send to FAs </h4>
+										<p>1.020.302 Fragen  </p>
+										</div>
+										<i class="bi bi-chevron-right rightarrow"></i>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		    </div>
+		    <div class="col-md-4">
+               <div class="jumbotron bearbe">
+				 <h6>In Beabeitung</h6>
+				 <hr style="border: 0px solid rgba(0,0,0,.1);height: 1px;background: rgba(200,200,200,0.3);">
+				<div class="bearbe-leep">
+					<div class="media">
+						<div class="media-left">
+						  <a href="#">
+							<img class="media-object" src="img/icon/vom.svg" alt="...">
+						  </a>
+						</div>
+						<div class="media-body">
+						  <p class="code">Code 1</p>
+						  <h4>3D Rendering vom Motor</h4>
+						  <ul class="imground">
+							  <li><img src="img/profile/peter.jpg"></li>
+							  <li><img src="img/profile/peter.jpg"></li>
+							  <li><img src="img/profile/peter.jpg"></li>
+							  <li><img src="img/profile/peter.jpg"></li>
+							  <li class="roundfive"><span>+5</span></li>
+						  </ul>
+						  <div class="btn-group">
+							<a href="#" class="btn btn-primary">Ausstahent</a>
+							<a href="#" class="btn btn-primary"><i class="bi bi-upload"></i> Update Status</a>
+					     </div>
+					  </div>
+				    </div>
+				    <hr>
+				    <div class="media code2">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="img/icon/vom.svg" alt="...">
+							</a>
+						</div>
+						<div class="media-body">
+							<p class="code">Code 2</p>
+							<h4>3D Rendering vom Motor</h4>
+							<ul class="imground">
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li class="roundfive"><span>+5</span></li>
+							</ul>
+							<div class="btn-group">
+								<a href="#" class="btn btn-primary">Bearbeitet</a>
+								<a href="#" class="btn btn-primary"><i class="bi bi-upload"></i> Update Status</a>
+							</div>
+						</div>
+			        </div>
+			       <hr>
+					<div class="media code3">
+						<div class="media-left">
+						<a href="#">
+							<img class="media-object" src="img/icon/vom.svg" alt="...">
+						</a>
+						</div>
+						<div class="media-body">
+							<p class="code">Code 3</p>
+							<h4>3D Rendering vom Motor</h4>
+							<ul class="imground">
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li><img src="img/profile/peter.jpg"></li>
+								<li class="roundfive"><span>+5</span></li>
+							</ul>
+							<div class="btn-group">
+								<a href="#" class="btn btn-primary">Laufend</a>
+								<a href="#" class="btn btn-primary"><i class="bi bi-upload"></i> Update Status</a>
+							</div>
+						</div>
+				   </div>
+				   <hr>
+				   <h5>View All <i class="bi bi-chevron-right"></i></h5>
+			    </div>
+			   </div>
+			   <div class="jumbotron bearbe" style="margin-top: 30px !important;">
+				<h6>Geliefert</h6>
+				<hr style="border: 0px solid rgba(0,0,0,.1);height: 1px;background: rgba(200,200,200,0.3);">
+			    <div class="bearbe-leep">
+				   <div class="media codeunivarsal">
+					   <div class="media-left">
+						 <a href="#">
+						   <img class="media-object" src="img/icon/vom.svg" alt="...">
+						 </a>
+					   </div>
+					   <div class="media-body">
+						 <p class="code">Code 1</p>
+						 <h4>3D Rendering vom Motor</h4>
+						 <ul class="imground">
+							 <li><img src="img/profile/peter.jpg"></li>
+							 <li><img src="img/profile/peter.jpg"></li>
+							 <li><img src="img/profile/peter.jpg"></li>
+							 <li><img src="img/profile/peter.jpg"></li>
+							 <li class="roundfive"><span>+5</span></li>
+						 </ul>
+						 <div class="btn-group">
+						   <a href="#" class="btn btn-primary">Ausstahent</a>
+						  
+						</div>
+					 </div>
+				   </div>
+				   <hr>
+				   <div class="media code2 codeunivarsal">
+					   <div class="media-left">
+						   <a href="#">
+							   <img class="media-object" src="img/icon/vom.svg" alt="...">
+						   </a>
+					   </div>
+					   <div class="media-body">
+						   <p class="code">Code 2</p>
+						   <h4>3D Rendering vom Motor</h4>
+						   <ul class="imground">
+							   <li><img src="img/profile/peter.jpg"></li>
+							   <li><img src="img/profile/peter.jpg"></li>
+							   <li><img src="img/profile/peter.jpg"></li>
+							   <li><img src="img/profile/peter.jpg"></li>
+							   <li class="roundfive"><span>+5</span></li>
+						   </ul>
+						   <div class="btn-group">
+							   <a href="#" class="btn btn-primary">Bearbeitet</a>
+						   </div>
+					   </div>
+				   </div>
+				  
+				  <hr>
+				  <h5>View All <i class="bi bi-chevron-right"></i></h5>
+			   </div>
+			  </div>
+
+
+		    </div>
+	   </div>
+	</div>
+	<!-- /#page-content-wrapper -->
+ </div>
+            <script src="js/bootstrap.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+			<script src="js/index.js"></script>
+
+    </body>
+</html>

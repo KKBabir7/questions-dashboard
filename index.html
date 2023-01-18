@@ -1,0 +1,472 @@
+
+<html>
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>
+		   index
+		</title>
+		<link rel="icon" href="img/calicon.png" type="image/png" sizes="16x16">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/navbar.css"> 
+		<link rel="stylesheet" href="css/style.css"> 
+		<link rel="stylesheet" href="css/cal.css">
+		<link rel="stylesheet" href="css/cal-min.css">
+    </head>
+    <style>
+			img{
+			image-rendering: -moz-crisp-edges !important;       
+			image-rendering:   -o-crisp-edges !important;       
+			image-rendering: -webkit-optimize-contrast !important;
+			image-rendering: crisp-edges !important;
+			-ms-interpolation-mode: nearest-neighbor !important;
+		}
+    </style>
+    <body>
+<!----------header----------->
+	<header class="headernav" id="headernav">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo/top-logo.svg"></a>
+			  </div>
+		  
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				
+				<ul class="nav navbar-nav navbar-right">
+				  <li><a href="#"><i class="bi bi-bell-fill"></i></a></li>
+				  <li class="dot"><a href="#"><i class="fa fa-comments"></i></a></li>
+				  <li><a href="#"> <i class="bi bi-grid-3x3-gap-fill"></i></a></li>
+				  <li class="profile"><a href="#"><img src="img/profile/peter.jpg"></a><i class="bi bi-plus-circle-fill"></i></li>
+				 
+				</ul>
+			  </div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		  </nav>
+	</header>
+
+    <div id="wrapper">
+	<!-- Sidebar -->
+	   <div id="sidebar-wrapper">
+		    <div  class="sidebar-nav">
+				<div class="sidebarlogo">
+					<p><img  id="sideimgsec" class="sideimgsec" src="img/logo/side-logo.png"></p>
+					<p><button class="navbar-toggle collapse in onoff" data-toggle="collapse" id="menu-toggle-2"> <i class="bi bi-arrow-left"></i>
+				</button></p>
+				</div>
+				<div class="homemenu" id="homemenu">
+					<p>Home</p>
+					<p>...</p>
+				</div>
+			    <ul class="nav-pills nav-stacked" id="menu">
+				   <li class="active">
+					    <a href="index.html"><span class="inconformenu"><i class="bi bi-grid-fill"></i>
+						</span> <span id="contentli" class="contentli"> Dashboard</span> </a>
+					 
+				    </li>
+				    <li>
+					    <a href="analytics.html"><span class="inconformenu"><i class="bi bi-file-bar-graph"></i>
+						</span><span id="contentli" class="contentli"> Analytics</span> </a>
+				    </li>
+				    <li>
+					    <a href="quesdb.html"> <span class="inconformenu"><i class="bi bi-card-text"></i> 
+						</span><span id="contentli" class="contentli">Question Database</span> </a>
+				    </li>
+				    <li>
+					    <a href="#"><span class="inconformenu"><i class="bi bi-credit-card"></i></span> <span id="contentli" class="contentli">Account</span> </a>
+				    </li>
+				    <li class=" message">
+					    <a href="#"><span class="inconformenu"><i class="bi bi-chat-square-text"></i>
+						</span> <span id="contentli" class="contentli">Message</span> </a>
+						<h3 class="notfi" id="notfi">30</h3>
+				    </li>
+				    <li >
+					    <a href="#"><span class="inconformenu"><i class="bi bi-gear"></i>
+						</span><span id="contentli" class="contentli">Settings</span> </a>
+				    </li>
+				    <li  class=" logoumenu">
+					    <a href="#"><span class="inconformenu">
+						<i class="bi bi-box-arrow-right"></i>
+					   </span> <span id="contentli" class="contentli">Logout</span> </a>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+	<!-- /#sidebar-wrapper -->
+	<!-- Page Content -->
+	<div id="page-content-wrapper">
+	   <div class="container-fluid xyz">
+		  <div class="row">
+			 <div class="col-md-8">
+				<div class="jumbotron dsh-slide">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						
+						</ol>
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<div class="caption">
+									<h1>Tutorial Starten </h1>
+									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui<br> blanditiis praesentium voluptatum deleniti atque</p>
+									<a href="#" class="btn btn-primary">Los gehts!</a>
+								</div>
+								<img src="img/slide/img.png">
+							</div>
+							<div class="item">
+								<div class="caption">
+									<h1>Tutorial Starten </h1>
+									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui<br> blanditiis praesentium voluptatum deleniti atque</p>
+									<a href="#" class="btn btn-primary">Los gehts!</a>
+								</div>
+								<img src="img/slide/img.png">
+							</div>
+							<div class="item">
+								<div class="caption">
+									<h1>Tutorial Starten </h1>
+									<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui<br> blanditiis praesentium voluptatum deleniti atque</p>
+									<a href="#" class="btn btn-primary">Los gehts!</a>
+								</div>
+								<img src="img/slide/img.png">
+							</div>
+						</div>
+
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+						</a>
+					</div>
+				</div>
+				<div class="jumbotron main-drop-media-jum">
+					<div class="row main-drop-media">
+						<div class="col-lg-6 col-ok-left">
+							<a href="" class="allmedia">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="img/icon/a1.svg" alt="...">
+									</div>
+									<div class="media-body">
+									<h4 class="media-heading">Frage suchen und einreichen </h4>
+									<p>1.020.302 Fragen </p>
+									</div>
+									<i class="bi bi-chevron-right rightarrow"></i>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-6 col-ok-right">
+							<a href="" class="allmedia">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="img/icon/a2.svg" alt="...">
+									</div>
+									<div class="media-body">
+									<h4 class="media-heading">Ausstehende <br>Korrekturen </h4>
+									<p>145+ corrections </p>
+									</div>
+									<i class="bi bi-chevron-right rightarrow"></i>
+								</div>
+							</a>
+						</div>
+					
+						<div class="col-lg-6 col-ok-left">
+							<a href="" class="allmedia">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="img/icon/a3.svg" alt="...">
+									</div>
+									<div class="media-body">
+									<h4 class="media-heading">Frage suchen und einreichen </h4>
+									<p>12+ Question </p>
+									</div>
+									<i class="bi bi-chevron-right rightarrow"></i>
+								</div>
+							</a>
+						</div>
+						<div class="col-lg-6 col-ok-right">
+							<a href="" class="allmedia">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="img/icon/a4.svg" alt="...">
+									</div>
+									<div class="media-body">
+									<h4 style="height: 30px;margin-top: 8px;" class="media-heading">Abstimmungen</h4>
+									<p>145+ Question </p>
+									</div>
+									<i class="bi bi-chevron-right rightarrow"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				
+               <div class="jumbotron ques-history">
+                   <div class="row">
+					   <div class="col-md-12">
+						   <h2>Question History</h2>
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+								<tr>
+									<th>NR.</th>
+									<th>Art Der Frage</th>
+									<th>Frage</th>
+									<th>Type</th>
+									<th>Date created</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										</tr>
+								<tr>
+									<td>1</td>
+									<td>Single-Choice Frage</td>
+									<td class="small">Woran ist der Hochvoltkabelstrang im Kraftfahrzeug zu erkennen?</td>
+									<td>
+										<div class="btn-group">
+                                           <a href="#" class="btn btn-primary">Erstellt</a>
+										   <a href="#" class="btn btn-primary">Verschickt</a>
+										</div>
+									</td>
+									<td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Single-Choice Frage</td>
+									<td class="small">Welche Stromart entsteht in den Ständerwicklungen eines Drehstromgenerators?</td>
+									<td>
+										<div class="btn-group">
+                                           <a href="#" class="btn btn-primary">Erstellt</a>
+										   <a href="#" class="btn btn-primary">Verschickt</a>
+										</div>
+									</td>
+									<td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Single-Choice Frage</td>
+									<td class="small">Auf einem Kundenfahrzeug ist folgendes Rad montiert: Reifenbreite b = 205 mm, Felgendurchmesser d = 381 mm und ...</td>
+									<td>
+										<div class="btn-group">
+                                           <a href="#" class="btn btn-primary">Erstellt</a>
+										   <a href="#" class="btn btn-primary">Verschickt</a>
+										</div>
+									</td>
+									<td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>Single-Choice Frage</td>
+									<td class="small">Nennen Sie vier Punkte, die bei der Sichtprüfung und Montage von Bremsleitungen besonders zu beachten sind.</td>
+									<td>
+										<div class="btn-group">
+                                           <a href="#" class="btn btn-primary">Erstellt</a>
+										   <a href="#" class="btn btn-primary">Verschickt</a>
+										</div>
+									</td>
+									<td>16 Apr 2022 <i class="bi bi-three-dots-vertical"></i></td>
+								</tr>
+								</tbody>
+							</table>
+						  </div>
+						  <h1>Load More <i class="bi bi-chevron-down"></i></h1>
+					   </div>
+				   </div>
+			   </div>
+
+
+			 </div>
+			 <div class="col-md-4">
+                  <div class="jumbotron calendar-jum">
+					<div class="content">
+						<div id="myCalendar" class="vanilla-calendar" ></div>
+					</div>
+				  </div>
+				  <div class="jumbotron neui-jum">
+					  <div class="row">
+						  <div class="col-md-12">
+							  <div class="neui-heading">
+								  <p>Neuigkeiten</p>
+								  <p>All &nbsp;<i class="bi bi-chevron-down"></i></p>
+								  <p>als gelesen markieren <i class="bi bi-check-circle"></i></p>
+							  </div>
+							  <div class="reject">
+								<div class="media">
+									<div class="media-left">
+									  <a href="#">
+										<img class="media-object" src="img/icon/r1.svg" alt="...">
+									  </a>
+									</div>
+									<div class="media-body">
+									  <p class="media-heading"><small>Dennis Nedry</small> add new question <small>Isla Nublar SOC2 compliance report for Vote</small></p>
+									  <div class="btn-group">
+										  <a href="#" class="btn btn-primary">Vote</a>
+										  <a href="#" class="btn btn-primary">Reject</a>
+									</div>
+									<br>
+									<time>Today at 9:43AM</time>
+								  </div>
+							  </div>
+							  <hr>
+							  <div class="media">
+								<div class="media-left">
+								  <a href="#">
+									<img class="media-object" src="img/icon/r2.svg" alt="...">
+								  </a>
+								</div>
+								<div class="media-body">
+								  <p class="media-heading"><small>Ray Arnold </small> sent you a message.</p>
+								  <time>Today at 9:43AM</time>
+							      </div>
+						      </div>
+						      <hr>
+								<div class="media">
+									<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="img/icon/r3.svg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<p class="media-heading"><small>Dennis Nedry </small>  add new exam <small>Nublar SOC2 compliance report </small>  for checking.</p>
+									<h4>
+										“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ”
+									</h4>
+								
+									<time>Today at 9:43AM</time>
+								</div>
+							</div>
+							<hr>
+								<div class="media">
+									<div class="media-left">
+									<a href="#">
+										<img class="media-object" src="img/icon/r4.svg" alt="...">
+									</a>
+									</div>
+									<div class="media-body">
+									<p class="media-heading"><small>You </small> Recieved honorierung of <small> $300 </small>  for <small>Isla Nublar SOC2 compliance report.</small> </p>
+									
+								
+									<time>Today at 9:43AM</time>
+								</div>
+							</div>
+							<hr>
+
+							<h5>View All <i class="bi bi-chevron-right"></i></h5>
+						  </div>
+					  </div>
+				  </div>
+			 </div>
+		  </div>
+	   </div>
+	</div>
+	<!-- /#page-content-wrapper -->
+ </div>
+            <script src="js/bootstrap.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+			<script src="js/index.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+			<script src="js/vanilla-calendar.js"></script>
+			<script src="js/vanilla-calendar-min.js"></script>
+			<script>
+				$(".carousel").swipe({
+
+swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+  if (direction == 'left') $(this).carousel('next');
+  if (direction == 'right') $(this).carousel('prev');
+
+},
+allowPageScroll:"vertical"
+
+});
+			</script>
+			
+			<script>
+				let pastDates = true, availableDates = false, availableWeekDays = false
+				
+				let calendar = new VanillaCalendar({
+					selector: "#myCalendar",
+					months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+					shortWeekday: [ 'Su','Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+					onSelect: (data, elem) => {
+						console.log(data, elem)
+					}
+				})
+				
+				let btnPastDates = document.querySelector('[name=pastDates]')
+				btnPastDates.addEventListener('click', () => {
+					pastDates = !pastDates
+					calendar.set({pastDates: pastDates})
+					btnPastDates.innerText = `${(pastDates ? 'Disable' : 'Enable')} past dates`
+				})
+				
+				let btnAvailableDates = document.querySelector('[name=availableDates]')
+				btnAvailableDates.addEventListener('click', () => {
+					availableDates = !availableDates
+					btnAvailableDates.innerText = `${(availableDates ? 'Clear available dates' : 'Set available dates')}`
+					if (!availableDates) {
+						calendar.set({availableDates: [], datesFilter: false})
+						return
+					}
+					let dates = () => {
+						let result = []
+						for (let i = 1; i < 15; ++i) {
+							if (i % 2) continue
+							let date = new Date(new Date().getTime() + (60 * 60 * 24 * 1000) * i)
+							result.push({date: `${String(date.getFullYear())}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`})
+						}
+						return result
+					}
+					calendar.set({availableDates: dates(), availableWeekDays: [], datesFilter: true})
+				})
+				
+				let btnAvailableWeekDays = document.querySelector('[name=availableWeekDays]')
+				btnAvailableWeekDays.addEventListener('click', () => {
+					availableWeekDays = !availableWeekDays
+					btnAvailableWeekDays.innerText = `${(availableWeekDays ? 'Clear available weekdays' : 'Set available weekdays')}`
+					if (!availableWeekDays) {
+						calendar.set({availableWeekDays: [], datesFilter: false})
+						return
+					}
+					let days = [{
+						day: 'monday'
+					}, {
+						day: 'tuesday'
+					}, {
+						day: 'wednesday'
+					}, {
+						day: 'friday'
+					}]
+					calendar.set({availableWeekDays: days, availableDates: [], datesFilter: true})
+				})
+			</script>
+    </body>
+</html>

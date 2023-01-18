@@ -1,0 +1,1468 @@
+body{
+	margin:0;
+	padding:0;
+	background:var(--bodybg);
+  overflow-x: hidden;
+	font-family: 'Inter', sans-serif;
+  width: 100%;
+  
+}
+#page-content-wrapper{
+  height: 100%;
+}
+/*...........all color root..........*/
+:root {
+--bodybg:#E5E5E5;
+--bluebg: #042546;
+--white: #ffffff;
+--gray:#808191;
+--hb:#1d3b58;
+--fw:600 ;
+--fwfive:500 ;
+--fwfour:400 ;
+--iconbg:#B0B7C3;
+--dot:#FF0D0D;
+--btncolor:#11142D;
+--cicon:#1B1D21;
+--cscolor:#012D59;
+--mediac:#171717;
+--colorlittle:#808191;
+--tbcolor:#2E2C34;
+--tbcd:#84818A;
+--mediacd:#1A1F36;
+--bgtable:rgba(249,250,250,1);
+--bshadow:0px 2px 4px rgba(156,156,156,0.25);
+--divshadow:0px 23px 44px rgba(176,183,195,0.14);
+}
+
+
+
+
+
+
+
+
+/*...................quwstion databage css start .................*/
+
+
+/*...........quesbd first search ..........*/
+.qdbsearch{
+    margin: 0 !important;
+    padding: 0 ;
+    padding-bottom: 100px !important;
+    border-radius: 14px;
+    background: linear-gradient( rgba(0, 26, 53, 1), rgba(0, 20, 53, 0.4) ),url(../img/qdb/top.svg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 100%;
+    padding: 20px 20px 20px 20px !important;
+    border-radius: 14px !important;
+    box-shadow: var(--divshadow);
+    margin-top: 16px !important;
+    height: auto;
+  }
+  
+  .qdbsearch .dbheading h3{
+    display: inline-block;
+    color: var(--white);
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .qdbsearch .dbheading h3 span{
+    color: #2D75BC;
+    font-weight: 400;
+  }
+  .qdbsearch .dbheading .btn{
+    display: inline-block;
+    float: right;
+    padding: 11px 24px;
+    border-radius: 8px;
+    background: var(--white) !important;
+    border: 1px solid var(--white) !important;
+    color: var(--cscolor) !important;
+    font-weight: var(--fw);
+    outline: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  .qdbsearch .dbheading .btn:hover{
+    opacity: 0.6;
+  }
+  
+  
+  .dbsearch{
+    margin-top: 30px;
+  }
+  .dbsearch input{
+    box-shadow: none;
+    outline: none;
+    height: 64px;
+  }
+  .dbsearch .btn{
+    height: 64px;
+    margin: 0;
+   
+  }
+  /*...........first quesdb select button ..........*/
+  .dbsearch .maintodokj-tods{
+   
+     overflow: hidden;
+     padding-top: 10px !important;
+     padding-bottom: 10px !important;
+     padding: 0;
+     border: none !important;
+    background: #fff; 
+   
+  } 
+  .dbsearch .maintodokj .dropdown-toggle{
+    height: 64px;
+  
+    background: #fff;
+    padding: 0px 10px 0px 15px;
+    margin: 0;
+     border-left: 1px solid rgba(0, 0,0,0.2) !important;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: var(--white) !important;
+   
+  }
+  .dbsearch .maintodokj .dropdown-toggle .caret{
+    margin-left: 10px;
+    opacity: 0.7;
+  
+  }
+  /*...........dropdown animation..........*/
+  .dropdown-menu {
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    opacity: 0;
+    display: block;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-height: 300px !important;
+    height: auto !important;
+    overflow-y: auto;
+  }
+  .dropdown-menu::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .dropdown-menu{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .open .dropdown-menu {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+    
+    border: none;
+  }
+  /*...........first hit search ..........*/
+  .dbsearch .btndiv{
+    background: var(--white) !important;
+    text-decoration: none;
+    border: none !important;
+    box-shadow: none;
+    border-radius: 0px 8px 8px 0px;
+  }
+  .dbsearch  .btnsuchen{
+    background: var(--cscolor);
+    height: 50px;
+    width: 80px;
+    margin-top: 1px;
+    border: none !important;
+    outline: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-size: 14px;
+    box-shadow: none;
+    font-weight: var(--fw);
+    transition: all 0.3s ease;
+  }
+  .dbsearch  .btnsuchen:hover{
+    opacity: 0.6;
+  }
+  .dbsearch .input-group{
+    
+  }
+  .dbsearch .mainsearchinput{
+    box-shadow: none;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+    font-size: 18px;
+    color: var(--colorlittle);
+    font-weight: var(--fwfive);
+    padding-left: 60px;
+    border-radius: 8px 0px 0px 8px;
+  }
+  .dbsearch .mainsearchinput:hover,.dbsearch .mainsearchinput:focus{
+    border: 1px solid rgba(0,0,0,0.1) !important;
+  }
+  .dbsearch .input-group{
+    position: relative;
+  }
+  .dbsearch .input-group .seaarchicon{
+    position: absolute;
+    font-size: 30px;
+    top: 18;
+    left: 20px;
+    color:var(--colorlittle);
+    z-index: 10;
+  }
+  
+  
+  
+  
+  
+  
+  /*...................6 search filters.........................*/
+          
+
+         /*........... 6 search filters div css..........*/
+  .fargefilter{
+   margin-top: 15px;
+   margin-bottom: 20px;
+  }
+  .fargefilter .fargeul{
+    width: 100%;
+   margin: 0;
+   padding: 0;
+  
+   float: left;
+   clear: both; 
+   list-style: none !important; 
+  }
+  
+  .fargefilter .fargeul .fageulli{
+    
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem !important;
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style: none !important;
+   
+  }
+  .fargefilter .fargeul .fageulli:nth-child(1){
+    width: 15% !important;
+  }
+  .fargefilter .fargeul .fageulli:nth-child(2){
+    width: 12% !important;
+  }
+  
+  .fargefilter .fargeul .fageulli:nth-child(3){
+    width: 28.5% !important;
+  }
+  .fargefilter .fargeul .fageulli:nth-child(4){
+    width: 15% !important;
+  }
+  .fargefilter .fargeul .fageulli:nth-child(5){
+    width: 13.5% !important;
+  }
+  .fargefilter .fargeul .fageulli:nth-child(6){
+    width: 16% !important;
+  }
+  
+       /*........... 1 search filters ..........*/
+  .fargefilter .artder{
+    width: 100%;
+    height: 40px;
+    padding-right: 2px;
+  }
+  .fargefilter .artder ul{
+    padding-top: 15px;
+    padding-bottom: 2px;
+  }
+  .fargefilter .artder .dropdown-toggle{
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px !important;
+    font-weight: var(--fw);
+    color: var(--tbcolor);
+    border: none !important;
+    background: var(--white) !important;
+  }
+  .checkdesign {
+    display: block;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--colorlittle);
+    font-weight: var(--fw);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkdesign input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 15;
+    border-radius: 3px;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkdesign:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkdesign input:checked ~ .checkmark {
+    background-color: var(--cscolor);
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkdesign input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkdesign .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+       /*........... 2,3 search filters ..........*/
+  
+  .fargefilter .todosn{
+      padding-right: 2px;
+  }
+  .fargefilter .todosn .botn-todos{
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    border: none !important;
+    background: var(--white) !important;
+  }
+   .todosn .botn-todos .spanzu{
+    font-size: 14px;
+    color: var(--colorlittle);
+    font-weight: var(--fwfive);
+  }
+  .todosn .botn-todos .intoradio{
+    color: var(--tbcolor);
+    font-weight: var(--fw);
+  }
+  .todosn .botn-todos .caret-posicion{
+    opacity: 0.6;
+    margin-left: 4px;
+  }
+  .todosn ul .activeto label{
+    color: #012D59 !important;
+  }
+  .todosn ul{
+   padding-top: 10px;
+   padding-bottom: 10px;
+  }
+  .todosn ul li{
+    color: #012D59;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+      border: 0px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+   
+  }
+  
+  .todosn  ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .todosn  ul li label{
+    display: block;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 0px 9px 45px;
+    margin: 0px auto;
+    z-index: 9;
+    cursor: pointer;
+    color: var(--colorlittle);
+    -webkit-transition: all 0.25s linear;
+  }
+  
+   .todosn  ul li:hover label{
+      color: var(--colorlittle);
+   
+  }
+  .todosn  ul li .check{
+    display: block;
+    position: absolute;
+    border: 1px solid #AAAAAA;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 11px;
+    left: 20px;
+     text-align: center;
+      z-index: 5;
+    overflow: hidden;
+      transition: border .25s linear;
+      -webkit-transition: border .25s linear;
+  }
+  
+  .todosn  ul li:hover .check {
+    border: 1px solid #012D59;
+  }
+  
+   .todosn  ul li .check::before {
+    display: block;
+    position: absolute;
+      content: '';
+    border-radius: 100%;
+    height: 9px;
+    width: 9px;
+   text-align: center;
+   left: 2px;
+   top: 2px;
+    margin: auto;
+      transition: background 0.25s linear;
+      -webkit-transition: background 0.25s linear;
+  }
+  
+  .todosn input[type=radio]:checked ~ .check {
+    border: 1px solid #012D59;
+  }
+  
+   .todosn  input[type=radio]:checked ~ .check::before{
+    background: #012D59;
+  }
+  
+   .todosn  input[type=radio]:checked ~ label{
+    color: #012D59;
+    background: none;
+    z-index: 1;
+    border-radius: 10px;
+  }
+
+  
+  
+         /*........... 4 or weitere search filters ..........*/
+  
+  .fargefilter .weitere{
+    width: 100%;
+    height: 40px;
+    padding-right: 2px;
+  }
+  .fargefilter .weitere ul{
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+  .fargefilter .weitere .botn-weitere{
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    box-shadow: none;
+    font-size: 14px !important;
+    font-weight: var(--fw);
+    color: var(--tbcolor);
+    border: none !important;
+    background: var(--white) !important;
+  }
+  .fargefilter .botn-weitere i{
+    color:var(--cscolor);
+    font-weight: bold;
+  }
+  
+  .fargefilter .weitere .dropdown-large-tabs{
+    min-width: 350px !important;
+    width: 100% !important;
+    overflow-y: auto ;
+   min-height: 310px !important;
+   height: auto !important;
+  }
+  .weitere .dropdown-large-tabs .nav-tabs{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .weitere .dropdown-large-tabs .nav-tabs li{
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .weitere .dropdown-large-tabs .nav-tabs li.active a{
+    border: none;
+    color: var(--cscolor);
+    font-weight: var(--fw);
+    font-size: 14px;
+   position: relative;
+   background: none !important;
+   background: transparent !important;
+  }
+  .weitere .dropdown-large-tabs .nav-tabs li.active a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--cscolor);
+    left: 0;
+    bottom: -5px;
+  }
+  .weitere .dropdown-large-tabs .nav-tabs li a{
+    border: none;
+  color: var(--tbcd);
+  font-weight: var(--fw);
+    padding: 5px 4px;
+    margin-top: 0px;
+    cursor: pointer;
+    background: none !important;
+    background: transparent !important;
+  }
+  
+  .weitere .dropdown-large-tabs .tab-content{
+     padding-left: 20px;
+     padding-right: 20px;
+     padding-top: 15px;
+     padding-bottom: 20px;
+  }
+  .weitere .dropdown-large-tabs  .searcdear  .form-group{
+    position: relative;
+  }
+  .weitere .dropdown-large-tabs  .searcdear input{
+    box-shadow: none;
+    border-radius: 4px;
+    padding-left: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .weitere .dropdown-large-tabs  .searcdear i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--colorlittle);
+  }
+  .weitere .dropdown-large-tabs .weiter-p{
+    margin-bottom: -35px;
+    margin-top: -30;
+  }
+  .weitere .dropdown-large-tabs .weiter-p span:nth-child(2){
+    font-size: 14px;
+    font-weight: var(--fw);
+    margin-left: 6px;
+  }
+  .weitere .dropdown-large-tabs .weiter-p span:nth-child(3){
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .weitere .dropdown-large-tabs .weiter-p span:nth-child(4){
+    font-size: 12px;
+    color:var(--tbcd);
+    font-weight: var(--fwfive);
+  }
+
+
+  
+/*........... 5,6 search filters checkbox..........*/
+
+.fargefilter .projekenbutton{
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    outline: none !important;
+    padding: 10px 3px 0px 12px;
+    box-shadow: none;
+    border: none !important;
+    background: var(--white) !important;
+}
+.fargefilter .kenpar{
+
+ padding-right: 2px !important;
+}
+.fargefilter .projekenbutton .checkmark {
+    top: 1px;
+    left: 0;
+}
+.fargefilter .projekenbutton .checkdesign {
+    color: var(--tbcolor);
+    padding-left: 25px;
+    text-align: justify;
+
+}
+.fargefilter .projekenbutton .checkdesign .txtover{
+    width: 100%; 
+    overflow: hidden ;
+    text-overflow: ellipsis;
+    white-space: nowrap ;
+    display: block;
+}
+
+
+          
+          
+          
+          
+/*...........chhose FRAGE tabe..........*/
+.fargeassin{
+      padding: 25px 15px 0px 15px !important;
+      border-radius: 14px !important;
+      background: var(--white);
+     
+  }
+
+.fargeassin .table tr th{
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--mediac);
+      font-weight: var(--fw);
+      border: none;
+      background: #8f92a110;
+  }
+.fargeassin .table tr th:nth-child(4){
+  text-align: center;
+}
+.fargeassin .table tr td{
+   border: none;
+  }
+.fargeassin .table tr th .checkmark , .fargeassin .table tr td .checkmark {
+    top: 0px;
+    left: 0;
+  }
+.fargeassin .table tr th .checkdesign,.fargeassin .table tr td .checkdesign {
+    color: var(--mediac);
+      font-weight: var(--fw);
+    padding-left: 25px;
+    font-size: 12px;
+    height: 6px;
+    text-align: justify;
+
+}
+.fargeassin .table tr{
+    
+}
+.fargeassin .table tr td{
+  padding-top: 25px;
+  padding-bottom: 15px;
+  position: relative;
+  
+}
+.fargeassin .table tr td:nth-child(2){
+    width: 20%;
+}
+.fargeassin .table tr td:nth-child(3){
+    width: 50%;
+}
+
+.fargeassin .table  p{
+    font-size: 14px;
+   font-weight: var(--fw);
+   color: var(--tbcolor);
+}
+.fargeassin .table .midelfar p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    height: auto;
+   padding: 0;
+   margin: 0;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.fargeassin .table .btn-group {
+    white-space: nowrap;
+   display: flex;
+   float: right;
+   margin-top: -5px;
+}
+.fargeassin .table .btn-group .btn{
+   display: inline-block;
+  
+}
+
+
+.fargeassin .table .btn-group .assign{
+    background: var(--cscolor);
+    border:none;
+    box-shadow: none;
+    outline: none;
+    border-radius: 32px !important;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: var(--fw);
+    transition: all 0.2s ease;
+    padding: 7px 12px;
+    height: 35px;
+}
+.fargeassin .table .btn-group .assign i{
+    color: #20C9AC;
+}
+.fargeassin .table .btn-group .assign:hover{
+    opacity: 0.6;
+}
+.fargeassin .table .btn-group .icodivleft{
+  background: none !important;
+  color: red;
+  border: none !important;
+  box-shadow: none;
+  font-size: 18px;
+  padding: 8px 0px 7px 6px;
+  height: 35px;
+  outline: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.fargeassin .table .btn-group .icodivleft:hover{
+    opacity: 0.6;
+}
+.fargeassin .table .btn-group .icodivleft1{
+    color: var(--btncolor);
+    opacity: 0.9;
+}
+.fargeassin .table .btn-group .icodivleft2{
+  color:#FC3400;
+}
+.fargeassin .table .btn-group .icodivlef3{
+    color: var(--colorlittle);
+}
+
+/*...........table page count.........*/
+.quesdbcounting {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.quesdbcounting .showing {
+  font-size: 12px;
+  font-weight: var(--fwfive);
+  color: var(--tbcd);
+  margin-top: 30px;
+}
+
+.pagination {
+  float: right;
+  margin-top: 20px;
+}
+
+.pagination ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 2px;
+    float: right;
+  }
+  .pagination ul li{
+    color: var(--tbcd);
+    font-weight: var(--fw);
+    list-style: none;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+  .pagination ul li.numb{
+    list-style: none;
+    height: 25px;
+    width: 25px;
+    margin: 0 3px;
+    line-height: 25px;
+    border-radius: 5px;
+  }
+  .pagination ul li.numb.first{
+    margin: 0px 3px 0 -5px;
+  }
+  .pagination ul li.numb.last{
+    margin: 0px -5px 0 3px;
+  }
+  .pagination ul li.dots{
+    font-size: 12px;
+    cursor: default;
+  }
+  .pagination ul li.btn{
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+  .pagination li.active,
+  .pagination ul li.numb:hover,
+  .pagination ul li:first-child:hover,
+  .pagination ul li:last-child:hover{
+    color: var(--cscolor);
+    font-weight: bold;
+    background: rgba(3,78,129,0.1);
+  }
+
+
+
+.mrigidoor{
+  display: none;
+}
+
+
+
+/*...........popup or modal css..........*/
+
+
+
+
+.modal.modal-wide{
+	overflow: hidden;
+  border: none !important;
+  border-radius: 14px !important;
+}
+.modal-dialog{
+width: 774px;
+border: none !important;
+box-shadow: none !important;
+border-radius: 10px;
+overflow: hidden;
+outline: none !important;
+
+}
+.modal .modal-content{
+  border: none;
+}
+.modal {
+  padding-right: 0px !important;
+}
+.modal .modal-body{
+  padding: 30px 30px 30px 30px;
+ overflow: hidden;
+  background: #fff;
+  overflow-y: auto;
+}
+.modal .modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal .modal-body{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.modal-wide .modal-body {
+	overflow-y: auto;
+ 
+}
+.modal .modal-header p:nth-child(1){
+  font-size: 14px;
+  color: var(--mediac);
+  font-weight: var(--fw);
+  margin-top: 12px;
+}
+.modal .modal-header p:nth-child(2){
+
+}
+.opacity-animate3{
+    animation:opt-animation3 0.3s ;
+  -moz-animation-fill-mode: forwards
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes opt-animation3 {
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@-moz-keyframes opt-animation3 {
+   0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@-o-keyframes opt-animation3{
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+@keyframes opt-animation3 {
+  0%   { opacity: 0; transform: scale(0.75);}
+  100% { opacity: 1; transform: scale(1);}
+}
+
+.neuefarge .media{
+  margin-left: 0;
+  padding-left: 0; 
+}
+.neuefarge .media h4{
+   margin-top: 4px;
+   font-size: 28px;
+   font-weight: var(--fw);
+   color: var(--tbcolor);
+}
+.neuefarge .media p{
+  font-size: 12px;
+  color: var(--tbcd);
+}
+.verwalnet .btn,.threedred .btn{
+  background: var(--cscolor) !important;
+  color: var(--white);
+  height: 48px;
+  border: none !important;
+  border-radius: 8px;
+  box-shadow: none;
+  font-weight: var(--fwfive);
+  outline: none !important;
+  float: right;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+.verwalnet .btn:hover,.threedred .btn:hover{
+  opacity: 0.6;
+}
+
+.threedred .btn{
+  float: left !important;
+  padding: 0px 30px;
+}
+
+
+.custom-select {
+  position: relative;
+
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #fff;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 17px;
+  right: 18px;
+  width: 0;
+  height: 0;
+  border:1px solid  var(--colorlittle);
+  border-width: 0 2px 2px 0;
+
+  padding: 3px;
+ transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+transition: all 0.3s ease;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+
+  top: 18px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+ 
+}
+.select-selected {
+  border-color:  rgba(233, 234, 235, 0.9) !important;
+  border-radius: 8px;
+  padding: 12px 18px !important;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: rgba(55,55,55,0.9);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  max-height: 200px;height: auto !important;
+overflow-y: auto;
+  
+  border-radius: 10px 10px 0px 0px;
+
+}
+/* width */
+.select-items::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+.select-items::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.select-items::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3); 
+}
+
+/* Handle on hover */
+.select-items ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.artform{
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.artform label{
+  color: #504F54;
+  font-size: 14px;
+  font-weight: var(--fwfive);
+  margin-left: 2px;
+}
+
+
+
+.forminlinr1{
+  margin-top: 20px;
+  color: #504F54;
+  font-size: 14px;
+  font-weight: var(--fwfive);
+}
+.forminlinr1 label{
+  margin-left: 16px;
+} 
+.forminlinr1 input,.artform .frasvgdinput input{
+  height: 44px;
+  box-shadow: none !important;
+  border:1px solid  rgba(233, 234, 235, 0.9) !important;
+  color: var(--tbcd);
+}
+.geeignet{
+  margin-top: 30px;
+}
+.geeignet p{
+   font-size: 18px;
+   color: var(--tbcolor);
+   margin-left: 16px;
+   font-weight: var(--fw);
+}
+.geeignet h5{
+  font-size: 14px;
+  margin-left: 16px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  color: #504F54;
+  font-weight: var(--fwfive);
+}
+.geeignet label{
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px !important;
+  color: var(--tbcolor);
+}
+.geeignet .checkmark{
+  left: 0px;
+}
+.geeignet .checkdesign{
+  padding-left: 28px;
+}
+.geeignet .ausille,.geeignet .ausille h5{
+  margin-left: 0px;
+}
+.towbtn {
+  margin-top: 20px;
+}
+.towbtn .btn-group{
+   
+   margin-right: -10px;
+}
+.towbtn.next,.towbtn.previous,.towbtn.submit{
+  margin-right: 10px;
+   float: right;
+  width: 220px !important;
+  color: var(--white) !important;
+  font-size: 14px;
+  padding: 13px 20px;
+  border-radius: 8px !important;
+  box-shadow: none;
+  font-weight: var(--fwfive);
+  outline: none !important;
+ transition: all 0.2s ease;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+.towbtn:hover{
+  opacity: 0.6;
+}
+.towbtn.next,.towbtn.submit{
+  background: var(--cscolor);
+  color: var(--white) !important;
+  border: 1px solid var(--cscolor);
+}
+.towbtn.previous{
+  background: var(--white) !important;
+  color: var(--colorlittle) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+
+           /*...........modal form css..........*/
+
+#msform {
+	width:100%;
+ height: auto !important;
+	position: relative;
+}
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+  height: auto !important;
+	padding: 0px 0px;
+	box-sizing: border-box;
+	width: 100%;
+	position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+
+}
+#msform .action-button:hover, #msform .action-button:focus {
+	
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 15px;
+  padding-top: 15px;
+ text-align: center;
+ margin-left: -30px;
+}
+#progressbar li {
+	list-style-type: none;
+	color: var(--tbcolor);
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 24.5%;
+  display: inline-block;
+  text-align: center;
+	position: relative;
+  transition: all 0.3s ease;
+}
+#progressbar li span{
+  margin-top: 15px;
+  display: block;
+  font-size: 12px;
+  margin-left: 6px;
+  font-weight: var(--fwfive);
+  color: var(--colorlittle);
+  transition: all 0.3s ease;
+}
+#progressbar li:before {
+	content: "";
+	left: 48.5%;
+	width: 15px;
+  height: 15px;
+  border-radius: 300px;
+	line-height: 15px;
+	display: block;
+  position: absolute;
+	font-size: 10px;
+	color: #333;
+	background: rgba(99,198,121,1);
+  box-shadow: 0px 0px 0px 12px rgba(99,198,121,0.1);
+	margin: 0 ;
+ z-index: 2;
+ transition: all 0.3s ease;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #E1E5EC;
+	position: absolute;
+	left: -48%;
+	top: 8px;
+	z-index: 0; 
+  transition: all 0.3s ease;
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:after{
+  background: #27AE60;
+  transition: all 0.3s ease;
+}
+#progressbar li.active:before{
+	background: rgba(99,198,121,1);
+  box-shadow: 0px 0px 0px 12px rgba(99,198,121,1);
+	color:red;
+  transition: all 0.3s ease;
+}
+
+#progressbar li span{
+position: relative;
+width: fit-content;
+display: block;
+margin: 0 auto;
+margin-top: 15px !important;
+}
+#progressbar li.active span{
+  color: var(--tbcolor);
+  font-weight: var(--fw);
+}
+#progressbar li.active span::after{
+  content: "";
+  position: absolute;
+  left: 32px;
+  top: -30px;
+  z-index: 50;
+  width: 8px;
+  height: 16px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.drop-zone {
+  max-width: 100%;
+  margin-top: 20px;
+  height: 150px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 2px dashed #8F92A1;
+  border-radius: 8px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone .drop-zone__input {
+  display: none;
+  visibility: hidden;
+}
+.drop-zone  .up{
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: var(--colorlittle);
+  padding: 10px;
+  margin-right: 10px;
+}
+.drop-zone .drop-zone__prompt {
+  font-size: 14px;
+  font-weight: var(--fw);
+}
+.drop-zone .drop-zone__prompt p{
+  color: #042546;
+}
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+.textebox textarea{
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 8px;
+}
+  @media screen and (max-width: 1092px) {
+    .fargefilter .fargeul{
+      float: none;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      align-items: center;
+    }
+    .fargefilter .fargeul .fageulli{
+      display: inline-block;
+      float: none;
+    }
+    .fargefilter .fargeul .fageulli:nth-child(1),  .fargefilter .fargeul .fageulli:nth-child(2),  .fargefilter .fargeul .fageulli:nth-child(3),  .fargefilter .fargeul .fageulli:nth-child(4),  .fargefilter .fargeul .fageulli:nth-child(5),  .fargefilter .fargeul .fageulli:nth-child(6) {
+      width: 45% !important;
+  }
+  }
+  @media screen and (max-width: 992px) {
+    #page-content-wrapper{
+      height: auto;
+    }
+    
+  }
+
+
+  @media screen and (max-width: 792px) {
+ .modal .modal-dialog{
+   width: 95%;
+   display: block;
+   margin: 0 auto;
+ }
+ #progressbar li{
+   width: 23%;
+   white-space: nowrap;
+ }
+  }
+ 
+  @media screen and (max-width: 768px) {
+    .qdbsearch .dbheading .btn{
+      float: left;
+      margin-top: 10px;
+    }
+    .qdbsearch .dbheading h3{
+      display: block;
+    }
+    .dbsearch{
+      margin-top: 80px;
+    }
+    .fargefilter .fargeul .fageulli:nth-child(1),  .fargefilter .fargeul .fageulli:nth-child(2),  .fargefilter .fargeul .fageulli:nth-child(3),  .fargefilter .fargeul .fageulli:nth-child(4),  .fargefilter .fargeul .fageulli:nth-child(5),  .fargefilter .fargeul .fageulli:nth-child(6) {
+      width: 100% !important;
+  }
+  .pagination {
+    float: left;
+    margin-top: 0px;
+}
+  }
+
+
+  @media screen and (max-width: 568px) {
+ .dbsearch .input-group-btn{
+  position: absolute;
+  margin-top: 80px;
+ }
+ .fargefilter{
+   margin-top: 85px;
+ }
+ .dbsearch .input-group{
+   width: 100%;
+ }
+ .dbsearch .mainsearchinput{
+   border-radius: 8px !important;
+ }
+ .dbsearch .maintodokj .dropdown-toggle{
+   border-radius: 8px 0px 0px 8px !important;
+ }
+
+
+  }
+  @media screen and (max-width: 468px) {
+ #progressbar{
+   margin-left: -70px;
+ }
+ #progressbar li span{
+   font-size: 9px;
+ }
+  }
+ 
